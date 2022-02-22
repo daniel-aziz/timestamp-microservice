@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/daniel-aziz/timestamp-microservice/issues"
   },
-  "homepage": "https://github.com/daniel-aziz/timestamp-microservice#readme"
+  "homepage": "https://github.com/daniel-aziz/timestamp-microservice#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
 }
