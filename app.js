@@ -10,8 +10,10 @@ app.get('/api', (req, res) => {
 // Get the user input date in unix and utc
 app.get('/api/:date', (req, res) => {
     let reqDate = req.params.date;
-    if (reqDate.includes('-')) return res.status(200).json({ unix: new Date(reqDate).getTime(), utc: new Date(reqDate).toUTCString() })
-    else return res.status(200).json({ unix: reqDate, utc: new Date(parseInt(reqDate)).toUTCString() })
+    if (reqDate.includes('-')) { 
+        return res.status(200).json({ unix: new Date(reqDate).getTime(), utc: new Date(reqDate).toUTCString() }) 
+    }
+    return res.status(200).json({ unix: reqDate, utc: new Date(parseInt(reqDate)).toUTCString() })
 })
 
 
